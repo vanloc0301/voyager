@@ -29,7 +29,7 @@ class VoyagerBreadController extends Controller
         // GET THE DataType based on the slug
         $dataType = DataType::where('slug', '=', $slug)->first();
 
-        // Check permission
+      
         Voyager::can('browse_'.$dataType->name);
 
         // Next Get the actual content from the MODEL that corresponds to the slug DataType
